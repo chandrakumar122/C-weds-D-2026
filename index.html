@@ -303,7 +303,7 @@ document.querySelectorAll('.hero,.sec2').forEach(function(sec){for(var i=0;i<14;
  e.style.left=(4+Math.random()*92)+'%';e.style.top=(6+Math.random()*88)+'%';e.style.animationDelay=(Math.random()*4)+'s';e.style.animationDuration=(2.6+Math.random()*2.4)+'s';e.style.width=e.style.height=(8+Math.random()*10)+'px';sec.appendChild(e)}});
 
 // ---- countdown (IST) with tick animation ----
-var T0=new Date('2026-11-15T10:00:00+05:30').getTime(),last={};
+var T0=new Date('2026-11-15T07:45:00+05:30').getTime(),last={};
 function pad(n){return String(n).padStart(2,'0')}
 function tick(){var x=Math.max(0,T0-Date.now()),v={'cd-d':Math.floor(x/864e5),'cd-h':Math.floor(x%864e5/36e5),'cd-m':Math.floor(x%36e5/6e4),'cd-s':Math.floor(x%6e4/1e3)};
  for(var k in v){var el=document.getElementById(k),t=pad(v[k]);if(last[k]!==t){el.textContent=t;if(last[k]!==undefined){el.classList.remove('tk');void el.offsetWidth;el.classList.add('tk')}last[k]=t}}}
